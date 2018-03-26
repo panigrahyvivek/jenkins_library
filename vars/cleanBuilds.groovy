@@ -1,5 +1,6 @@
-def call(String name = 'human') {
-    // Any valid steps can be called from this code, just like in other
-    // Scripted Pipeline
-    echo "Hello, ${name}."
+def call(String jobname) {
+    def job = Jenkins.instance.getItem(jobName)
+	job.getBuilds().each { it.delete() }
+	job.nextBuildNumber = 1
+	job.save()
 }
