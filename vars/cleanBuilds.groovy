@@ -1,4 +1,4 @@
-def call(String jobname) {
+def call(String jobName) {
     def job = Jenkins.instance.getItem(jobName)
 	job.getBuilds().each { it.delete() }
 	job.nextBuildNumber = 1
