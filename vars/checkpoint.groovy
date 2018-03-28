@@ -3,6 +3,7 @@
 def call(def system){
 	node(){
 		echo '12'
+		echo system
 		if(system == "QA"){
 			echo '123'
 			timeout(time: 90, unit: 'SECONDS'){
