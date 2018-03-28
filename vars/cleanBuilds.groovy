@@ -4,3 +4,4 @@ def call(String jobName) {
 	job.nextBuildNumber = 1
 	job.save()
 }
+
