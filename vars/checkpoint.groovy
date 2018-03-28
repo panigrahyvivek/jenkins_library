@@ -1,6 +1,6 @@
 #!groovy
 
-def call(String system){
+def call(def system){
 	node(){
 		
 		if(system == 'QA'){
